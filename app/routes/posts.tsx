@@ -29,18 +29,16 @@ export default function PostsPage({ loaderData }: Route.ComponentProps) {
   const { posts } = loaderData;
   console.log("hello", posts);
   return (
-    <div>
-      <>
-        <h1>Posts</h1>
-        <ul>
-          {posts.map((p) => (
-            <li key={p.id}>
-              <Link to={`/posts/${p.id}`}>{p.title}</Link>
-            </li>
-          ))}
-        </ul>
-      </>
-    </div>
+    <>
+      <h1>Posts</h1>
+      <ul>
+        {posts.map((p) => (
+          <li key={p.id}>
+            <Link to={`/posts/${p.id}`}>{p.title}</Link>
+          </li>
+        ))}
+      </ul>
+    </>
   );
 }
 
